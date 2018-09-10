@@ -40,8 +40,16 @@
   </div>
   <div>
     <hr/>
-    <h4 class="note note-info text-center">
-      ethminer.exe -F {{config.HttpHost}}:{{config.HttpPort}}/&lt;address&gt;/&lt;worker&gt; -G
-    </h4>
+    <div class="note note-info">
+        <p>
+            EthDcrMiner64.exe -epool stratum+tcp://{{config.StratumHost}}:{{config.StratumPort}} -ewal &lt;address&gt; -epsw x -eworker &lt;worker&gt;
+        </p>
+        <p class="text-warning">
+             EthDcrMiner64.exe -epool stratum+tcp://{{config.StratumHost}}:{{config.StratumPort}} -ewal 0xb53ed3df54ac25bb1badf53fba5654ae2902e16b -epsw x -eworker john-1
+        </p>
+    </div>
+     <div class="note note-info">
+            <p>ethminer.exe -F {{config.HttpHost}}:{{config.HttpPort}}/&lt;address&gt;/&lt;worker&gt; -G</p>
+    </div>
   </div>
 </div>
